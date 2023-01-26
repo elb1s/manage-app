@@ -3,7 +3,10 @@ import illustration from "../assets/images/illustration-intro.svg";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className="md:flex-row md:flex mt-12 flex  z-0 flex-col-reverse justify-between  ">
+    <div
+      className="md:flex-row md:flex mt-12 flex px-5 md:px-10 z-0 flex-col-reverse justify-between "
+      id="home"
+    >
       <motion.div
         initial={{ x: -100, opacity: 0.1 }}
         animate={{ x: 0, opacity: 1 }}
@@ -21,14 +24,9 @@ const Hero = () => {
             while keeping the larger team goals in view.
           </p>
         </div>
-        <motion.button
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.1 }}
-          transition={{ duration: 0.7 }}
-          className="mt-10 bg-orange-600 py-3 px-8 mx-auto md:mx-0 flex text-white rounded-full"
-        >
+        <button className="mt-10 bg-orange-600 py-3 px-8 mx-auto md:mx-0 flex text-gray-200 rounded-full hover:text-white hover:scale-110 duration-200">
           Get Started
-        </motion.button>
+        </button>
       </motion.div>
       <motion.div
         initial={{ scale: 0.2 }}

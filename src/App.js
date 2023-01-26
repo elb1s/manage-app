@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="max-w-7xl mx-auto md:px-10 px-5 ">
+      <div className="max-w-7xl mx-auto ">
         <Navbar />
         <Hero />
         <About />

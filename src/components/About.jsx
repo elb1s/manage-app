@@ -34,7 +34,10 @@ const About = () => {
   ];
 
   return (
-    <div className="mt-24 font-vietnam md:flex gap-44 ">
+    <div
+      className="mt-24 font-vietnam md:flex gap-44 px-5 md:px-10"
+      id="aboutus"
+    >
       <motion.div
         ref={ref}
         animate={controls}
@@ -52,7 +55,12 @@ const About = () => {
         </p>
       </motion.div>
 
-      <div>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variants}
+      >
         {aboutDesc.map((des, index) => (
           <div>
             <div
@@ -71,7 +79,7 @@ const About = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

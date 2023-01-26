@@ -54,33 +54,38 @@ const Testimonails = () => {
     },
   ];
   return (
-    <div className="mt-24 mb-20 ">
-      <div>
-        <motion.h1
-          ref={ref}
-          animate={testiAnim}
-          className="text-center text-4xl font-bold mb-20"
-        >
-          What they've said
-        </motion.h1>
-      </div>
-      <div className="flex flex-col md:flex md:flex-row gap-2 ">
-        {persons.map((person, index) => (
-          <div>
-            <div className="bg-gray-100 p-4" key={index}>
-              <img
-                src={person.img}
-                alt={person.name}
-                className="w-16 flex mx-auto"
-              />
-              <div className="text-center mt-6  min-w-min">
-                <h1 className="font-bold"> {person.name}</h1>
-                <p className="text-gray-500 text-center">"{person.quote}"</p>
+    <div id="testimonials" className="px-5 md:px-10">
+      <motion.div ref={ref} animate={testiAnim} className="mt-24 mb-20 ">
+        <div>
+          <motion.h1
+            ref={ref}
+            animate={testiAnim}
+            className="text-center text-4xl font-bold mb-20 "
+          >
+            What they've said
+          </motion.h1>
+        </div>
+        <div className="flex  flex-col md:flex md:flex-row gap-3 ">
+          {persons.map((person, index) => (
+            <div>
+              <div
+                className="bg-yellow-200 rounded-md p-4 hover:scale-105 duration-300 cursor-pointer"
+                key={index}
+              >
+                <img
+                  src={person.img}
+                  alt={person.name}
+                  className="w-16 flex mx-auto"
+                />
+                <div className="text-center mt-6  min-w-min">
+                  <h1 className="font-bold text-indigo-800"> {person.name}</h1>
+                  <p className="text-gray-800 text-center">"{person.quote}"</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };
